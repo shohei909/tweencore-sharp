@@ -276,7 +276,7 @@ namespace TweenCore
 		{
 			return degree / 360;
 		}
-		public static float rateToDegree(this float rate)
+		public static float RateToDegree(this float rate)
 		{
 			return rate * 360;
 		}
@@ -284,7 +284,7 @@ namespace TweenCore
 		{
 			return radian / (2 * Mathf.PI);
 		}
-		public static float rateToRadian(this float rate)
+		public static float RateToRadian(this float rate)
 		{
 			return rate * 2 * Mathf.PI;
 		}
