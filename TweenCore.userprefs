@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{5FCD713D-2A96-4852-A4CB-CD5A44428252}|単体テスト">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="TweenCoreTest\Test.cs">
+    <Files>
+      <File FileName="TweenCoreTest\Test.cs" Line="10" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.TweenCoreTest PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

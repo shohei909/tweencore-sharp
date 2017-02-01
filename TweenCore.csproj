@@ -10,6 +10,8 @@
     <AssemblyName>TweenCore</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,36 +34,34 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\..\..\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Easing.cs" />
-    <Compile Include="src\FloatTools.cs" />
-    <Compile Include="src\structure\BoundaryMode.cs" />
-    <Compile Include="src\Structure\TimelineSearchResult.cs" />
-    <Compile Include="src\Structure\FloatChangeTimelinePart.cs" />
-    <Compile Include="src\Structure\Direction.cs" />
-    <Compile Include="src\Structure\FloatChange.cs" />
-    <Compile Include="src\Structure\FloatChangePart.cs" />
-    <Compile Include="src\Structure\FloatChangeRepeatPart.cs" />
-    <Compile Include="src\Structure\Timeline.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Easing.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\FloatTools.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Structure\BoundaryMode.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Structure\Direction.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Structure\FloatChange.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Structure\FloatChangePart.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Structure\FloatChangeRepeatPart.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Structure\FloatChangeTimelinePart.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Structure\Timeline.cs" />
+    <Compile Include="Assets\TweenCore\Scripts\Structure\TimelineSearchResult.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src" />
-    <Folder Include="src\structure" />
+    <Folder Include="Assets" />
+    <Folder Include="Assets\TweenCore" />
+    <Folder Include="Assets\TweenCore\Scripts" />
+    <Folder Include="Assets\TweenCore\Scripts\Structure" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,7 +11,7 @@ namespace TweenCore
 		/*
 	     * LINEAR
 	     */
-		/** 1-order */
+		///<summary>1-order</summary>
 		public static float Linear(this float t)
 		{
 			return t;
@@ -67,22 +67,22 @@ namespace TweenCore
 		/*
 	     * QUAD EASING
 	     */
-		/** 2-order */
+		///<summary>2-order</summary>
 		public static float QuadIn(this float t)
 		{
 			return t * t;
 		}
-		/** 2-order */
+		///<summary>2-order</summary>
 		public static float QuadOut(this float t)
 		{
 			return -t * (t - 2);
 		}
-		/** 2-order */
+		///<summary>2-order</summary>
 		public static float QuadInOut(this float t)
 		{
 			return (t < 0.5f) ? 2 * t * t : -2 * ((t -= 1) * t) + 1;
 		}
-		/** 2-order */
+		///<summary>2-order</summary>
 		public static float QuadOutIn(this float t)
 		{
 			return (t < 0.5f) ? -0.5f * (t = (t * 2)) * (t - 2) : 0.5f * (t = (t * 2 - 1)) * t + 0.5f;
@@ -92,24 +92,24 @@ namespace TweenCore
 		/*
 	     * CUBIC EASING
 	     */
-		/** 3-order */
+		///<summary>3-order</summary>
 		public static float CubicIn(this float t)
 		{
 			return t * t * t;
 		}
-		/** 3-order */
+		///<summary>3-order</summary>
 		public static float CubicOut(this float t)
 		{
 			return (t = t - 1) * t * t + 1;
 		}
-		/** 3-order */
+		///<summary>3-order</summary>
 		public static float CubicInOut(this float t)
 		{
 			return ((t *= 2) < 1) ?
 	            0.5f * t * t * t :
 	            0.5f * ((t -= 2) * t * t + 2);
 		}
-		/** 3-order */
+		///<summary>3-order</summary>
 		public static float CubicOutIn(this float t)
 		{
 			return 0.5f * ((t = t * 2 - 1) * t * t + 1);
@@ -119,22 +119,22 @@ namespace TweenCore
 		/*
 	     * QUART EASING
 	     */
-		/** 4-order */
+		///<summary>4-order</summary>
 		public static float QuartIn(this float t)
 		{
 			return (t *= t) * t;
 		}
-		/** 4-order */
+		///<summary>4-order</summary>
 		public static float QuartOut(this float t)
 		{
 			return 1 - (t = (t = t - 1) * t) * t;
 		}
-		/** 4-order */
+		///<summary>4-order</summary>
 		public static float QuartInOut(this float t)
 		{
 			return ((t *= 2) < 1) ? 0.5f * (t *= t) * t : -0.5f * ((t = (t -= 2) * t) * t - 2);
 		}
-		/** 4-order */
+		///<summary>4-order</summary>
 		public static float QuartOutIn(this float t)
 		{
 			return (t < 0.5f) ? -0.5f * (t = (t = t * 2 - 1) * t) * t + 0.5f : 0.5f * (t = (t = t * 2 - 1) * t) * t + 0.5f;
@@ -144,22 +144,22 @@ namespace TweenCore
 		/*
 	     * QUINT EASING
 	     */
-		/** 5-order */
+		///<summary>5-order</summary>
 		public static float QuintIn(this float t)
 		{
 			return t * (t *= t) * t;
 		}
-		/** 5-order */
+		///<summary>5-order</summary>
 		public static float QuintOut(this float t)
 		{
 			return (t = t - 1) * (t *= t) * t + 1;
 		}
-		/** 5-order */
+		///<summary>5-order</summary>
 		public static float QuintInOut(this float t)
 		{
 			return ((t *= 2) < 1) ? 0.5f * t * (t *= t) * t : 0.5f * (t -= 2) * (t *= t) * t + 1;
 		}
-		/** 5-order */
+		///<summary>5-order</summary>
 		public static float QuintOutIn(this float t)
 		{
 			return 0.5f * ((t = t * 2 - 1) * (t *= t) * t + 1);
