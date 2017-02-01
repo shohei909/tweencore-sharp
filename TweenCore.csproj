@@ -51,10 +51,13 @@
     <Compile Include="src\Easing.cs" />
     <Compile Include="src\FloatTools.cs" />
     <Compile Include="src\structure\BoundaryMode.cs" />
+    <Compile Include="src\Structure\TimelineSearchResult.cs" />
+    <Compile Include="src\Structure\FloatChangeTimelinePart.cs" />
     <Compile Include="src\Structure\Direction.cs" />
     <Compile Include="src\Structure\FloatChange.cs" />
     <Compile Include="src\Structure\FloatChangePart.cs" />
     <Compile Include="src\Structure\FloatChangeRepeatPart.cs" />
+    <Compile Include="src\Structure\Timeline.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src" />

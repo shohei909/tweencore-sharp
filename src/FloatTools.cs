@@ -151,7 +151,7 @@ namespace TweenCore
 	     * @param boundaryMode
 	     * @return 0 to sortedValues.Count integer
 	     */
-	    public static int BinarySearch(IList<float> sortedValues, float value, BoundaryMode boundaryMode = BoundaryMode.Low)
+	    public static int FloatBinarySearch(this IList<float> sortedValues, float value, BoundaryMode boundaryMode = BoundaryMode.Low)
 	    {
 	        var min = 0;
 	        var max = sortedValues.Count;

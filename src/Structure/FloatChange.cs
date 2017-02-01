@@ -131,5 +131,87 @@ namespace TweenCore
 			}
 		}
 
+		public void HandleTimelinePart(
+			float timelineFrom,
+			float timelineTo,
+			Timeline<Action<FloatChangeTimelinePart>> updatePartTimeline)
+		{
+			if (timelineFrom != timelineTo) {
+				var p = Previous.InverseLerp(timelineFrom, timelineTo);
+				var c = Current.InverseLerp(timelineFrom, timelineTo);
+				if ((0 < p && c < 1) || (0 < c && p < 1)) {
+					var length = updatePartTimeline.Count;
+					p = p.Clamp(0, 1);
+					c = c.Clamp(0, 1);
+
+					var pResult = updatePartTimeline.Search(p);
+					var cResult = updatePartTimeline.Search(c);
+					var pCount = pResult.Index;
+					var cCount = cResult.Index;
+					var pRate = pResult.InnerRate(p);
+					var cRate = cResult.InnerRate(c);
+					var hasNext = false;
+
+					if (p < c) {
+						do {
+							if (pCount == cCount) {
+								hasNext = false;
+								var part = new FloatChangeTimelinePart(
+									           pRate,
+									           cRate,
+									           pCount,
+									           updatePartTimeline.RangeLeft(pCount),
+									           updatePartTimeline.RangeRight(pCount),
+									           hasNext
+								           );
+								updatePartTimeline.DataAt(pCount)(part);
+							} else {
+								hasNext = (pCount + 1 != cCount) || (cRate != 0);
+								var part = new FloatChangeTimelinePart(
+									           pRate,
+									           1,
+									           pCount,
+									           updatePartTimeline.RangeLeft(pCount),
+									           updatePartTimeline.RangeRight(pCount),
+									           hasNext
+								           );
+								updatePartTimeline.DataAt(pCount)(part);
+							}
+							pRate = 0;
+							pCount += 1;
+						} while (hasNext);
+					} else {
+						do {
+							if (pCount == cCount) {
+                            
+								hasNext = false;
+								var part = new FloatChangeTimelinePart(
+									           pRate,
+									           cRate,
+									           pCount,
+									           updatePartTimeline.RangeLeft(pCount),
+									           updatePartTimeline.RangeRight(pCount),
+									           hasNext
+								           );
+								updatePartTimeline.DataAt(pCount)(part);
+							} else {
+								hasNext = (pCount - 1 != cCount) || (cRate != 1);
+								var part = new FloatChangeTimelinePart(
+									           pRate,
+									           0,
+									           pCount,
+									           updatePartTimeline.RangeLeft(pCount),
+									           updatePartTimeline.RangeRight(pCount),
+									           hasNext
+								           );
+								updatePartTimeline.DataAt(pCount)(part);
+							}
+							pRate = 1;
+							pCount -= 1;
+						} while (hasNext);
+					}
+				}
+			}
+		}
 	}
 }
